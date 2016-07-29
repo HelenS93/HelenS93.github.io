@@ -3,6 +3,7 @@ body {
     margin: 0;
     font: 1.0em "Myriad Pro", sans-serif;
     background: #fff;
+    max-width: 2000px;
 }
 h3, h4 {
     text-transform: uppercase;
@@ -16,6 +17,7 @@ h3, h4 {
     position: absolute;
     left: 0;
     right: 0;
+    margin-top: 2em;
 }
 /*Меню*/
 .Mypage {
@@ -63,6 +65,8 @@ h3, h4 {
     width: 100%;
     margin: 0.5em 0;
     text-transform: uppercase;
+    line-height: 2.0em;
+    font-size: 2.0em;
 }
 /*Слайдер*/
 .bgCarousel {
@@ -71,7 +75,7 @@ h3, h4 {
     background-size: 100% 100%;
     color: #fff;
 }
-.bgCarousel:before {
+.bgCarousel::before {
     content: "";
     position:absolute;
     width: 100%;
@@ -120,7 +124,7 @@ h3, h4 {
 /*sectionLight*/
 .sectionLight {
     color: #7e7e7e;
-    padding-bottom: 5em;
+    padding-bottom: 7em;
 }
 .sectionLight h3, .sectionLight h4 {
     color: #2a404e;
@@ -128,16 +132,17 @@ h3, h4 {
 .sectionLight img {
     margin: auto;
 }
+/*sectionDark*/
 .sectionDark {
     color: #f1f1f1;
     background: #2e3e4e;
-    padding-bottom: 5em;
+    padding-bottom: 7em;
 }
 .sectionDark h3, .sectionLight h4 {
     color: #fefefe;
 }
 #works .row img {
-    margin: 2em auto;
+    margin: 1.5em auto;
     width: 90%;
 }
 #works .row>div {
@@ -151,7 +156,22 @@ img.search {
     bottom: 0;
     right: 0;
 }
-#works .col-sm-6.col-md-3:first-child {
+.borderAngleLeft, .borderAngleRight {
+     position: absolute;
+     width: 50%;
+     height: 50%;
+ }
+.borderAngleLeft {
+    left: 0;
+    top: 0;
+    border-top: 0.5em solid #ebc20e;
+    border-left: 0.5em solid #ebc20e;
+}
+.borderAngleRight {
+    right: 0;
+    bottom: 0;
+    border-bottom: 0.5em solid #ebc20e;
+    border-right: 0.5em solid #ebc20e;
 }
 /*
 -webkit-transform:scale(1.25);

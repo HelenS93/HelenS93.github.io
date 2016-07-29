@@ -8,16 +8,28 @@ $( document ).ready(function() {
     $(window).load(function () {
         SetDisplayMenu();
     });
+    //якоря
+    $('a[href^="#"]').click(function(){
+            //Сохраняем значение атрибута href в переменной:
+        var target = $(this).attr('href');
+        var offset = $(target).offset();
+        //alert(offset.top);
+        $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+        return false;
+    });
+
 //меню
     function SetDisplayMenu() {
         var displayToggle = $('.navbar-toggle').css('display');
         if(displayToggle!='none') {
             $('.Mypage').css('top','0.5em');
-            $('.navbar-collapse').removeClass('pull-right');
+            $('.navbar-nav').removeClass('pull-right');
+            $('img.search').css('top','-1.5em');
         }
         else {
             $('.Mypage').css('top','2em');
-            $('.navbar-collapse').addClass('pull-right');
+            $('.navbar-nav').addClass('pull-right');
+            $('img.search').css('top','0');
         }
     }
 //слайдер
