@@ -16,8 +16,6 @@ h3, h4 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 2em;
-    margin: 0;
 }
 /*Меню*/
 .Mypage {
@@ -122,13 +120,38 @@ h3, h4 {
 /*sectionLight*/
 .sectionLight {
     color: #7e7e7e;
-    padding-bottom: 2em;
+    padding-bottom: 5em;
 }
 .sectionLight h3, .sectionLight h4 {
     color: #2a404e;
 }
 .sectionLight img {
     margin: auto;
+}
+.sectionDark {
+    color: #f1f1f1;
+    background: #2e3e4e;
+    padding-bottom: 5em;
+}
+.sectionDark h3, .sectionLight h4 {
+    color: #fefefe;
+}
+#works .row img {
+    margin: 2em auto;
+    width: 90%;
+}
+#works .row>div {
+    position: relative;
+}
+img.search {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+#works .col-sm-6.col-md-3:first-child {
 }
 /*
 -webkit-transform:scale(1.25);

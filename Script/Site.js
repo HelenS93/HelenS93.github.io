@@ -26,4 +26,24 @@ $( document ).ready(function() {
         pause: 'hover',
         wrap: true
     });
+
+    //hover
+    $('img.search').hover(function () {
+            $(this).css('display','block');
+            return false;
+        },
+        function () {
+            $(this).css('display','none');
+            return false;
+        }
+    );
+    $('.sectionDark .row img[alt="image"]').hover(function () {
+        $(this).next().css('display','block');
+            return false;
+    },
+        function () {
+            $(this).next().css('display','none');
+            return false;
+        }
+    );
 });
