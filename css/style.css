@@ -5,7 +5,7 @@ body {
     background: #fff;
     max-width: 2000px;
 }
-h3, h4 {
+h3, h4, h5 {
     text-transform: uppercase;
     font-weight: 900;
 }
@@ -132,6 +132,9 @@ h3, h4 {
 .sectionLight img {
     margin: auto;
 }
+#about img[alt="user"] {
+    margin-right: 5em;
+}
 /*sectionDark*/
 .sectionDark {
     color: #f1f1f1;
@@ -172,6 +175,26 @@ img.search {
     bottom: 0;
     border-bottom: 0.5em solid #ebc20e;
     border-right: 0.5em solid #ebc20e;
+}
+/*ПрогрессБар*/
+.progress-label {
+    color: #2a404e;
+    text-align: left;
+}
+.progress {
+    overflow: visible;
+}
+.progress-bar {
+    background-color: #f0c514;
+    position: relative;
+}
+#about .progress-bar span {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    padding-right: 1em;
+    color: #2a404e;
+    border-right: 1px solid #f0c514;
 }
 /*
 -webkit-transform:scale(1.25);

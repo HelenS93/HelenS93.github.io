@@ -9,7 +9,7 @@ $( document ).ready(function() {
         SetDisplayMenu();
     });
     //якоря
-    $('a[href^="#"]').click(function(){
+    $('.bottom-icon').click(function(){
             //Сохраняем значение атрибута href в переменной:
         var target = $(this).attr('href');
         var offset = $(target).offset();
