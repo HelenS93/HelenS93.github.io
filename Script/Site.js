@@ -12,8 +12,6 @@ $( document ).ready(function() {
     $('.bottom-icon').click(function(){
             //Сохраняем значение атрибута href в переменной:
         var target = $(this).attr('href');
-        var offset = $(target).offset();
-        //alert(offset.top);
         $('html, body').animate({scrollTop: $(target).offset().top}, 800);
         return false;
     });
@@ -55,6 +53,21 @@ $( document ).ready(function() {
     },
         function () {
             $(this).next().css('display','none');
+            return false;
+        }
+    );
+
+    //social
+
+
+    $('.social a').hover(function () {
+            var leftPos = $(this).css('backgroundPosition').split(' ')[0];
+            var left =  leftPos+" -35px";
+            $(this).css('backgroundPosition', left);
+            return false;
+        },
+        function () {
+            $(this).css('backgroundPosition', '');
             return false;
         }
     );

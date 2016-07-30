@@ -1,13 +1,44 @@
+/* font-family: "ArvoRegular"; */
+@font-face {
+    font-family: "Arvo";
+    src: url("../fonts/ArvoRegular/ArvoRegular.eot");
+    src: url("../fonts/ArvoRegular/ArvoRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ArvoRegular/ArvoRegular.woff") format("woff"),
+    url("../fonts/ArvoRegular/ArvoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "OpenSansRegular"; */
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot");
+    src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+    url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 body {
     padding: 0;
     margin: 0;
-    font: 1.0em "Myriad Pro", sans-serif;
+    font: 1.5em Arvo, "Myriad Pro", sans-serif;
     background: #fff;
     max-width: 2000px;
 }
 h3, h4, h5 {
     text-transform: uppercase;
     font-weight: 900;
+}
+p {
+    font-family: "OpenSansRegular", "Myriad Pro", sans-serif;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #55626f;
+    margin: 2em 0;
+    padding: 0;
 }
 .container {
     position: relative;
@@ -141,6 +172,9 @@ h3, h4, h5 {
     background: #2e3e4e;
     padding-bottom: 7em;
 }
+.sectionDark:last-child {
+    padding-bottom: 2em;
+}
 .sectionDark h3, .sectionLight h4 {
     color: #fefefe;
 }
@@ -196,7 +230,76 @@ img.search {
     color: #2a404e;
     border-right: 1px solid #f0c514;
 }
+/*social*/
+.social a {
+    display: block;
+    height: 25px;
+    width: 26px;
+    margin: 2em auto;
+    overflow: hidden;
+    background: url("../img/social.png") no-repeat ;
+}
+a.twitter {
+    background-position: 0 0;
+}
+a.facebook {
+    background-position: -60px 0;
+}
+a.google {
+    background-position: -123px 0;
+}
+a.youtube {
+    background-position: -185px 0;
+}
+a.behance {
+    background-position: -247px 0;
+}
+a.dribble {
+    background-position: -308px 0;
+}
+a.pinterest {
+    background-position: -370px 0;
+}
+a.deviantart {
+    background-position: -430px 0;
+}
+/*form*/
+form {
+    width: 100%;
+}
+input {
+    margin-bottom: 2em;
+}
+.form-control {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #d5d6d7;
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.form-control::-moz-placeholder {
+    color: #dedede;
+}
+.form-control:-ms-input-placeholder {
+    color: #dedede;
+}
+.form-control::-webkit-input-placeholder {
+    color: #dedede;
+}
+form button.btn {
+    color: #fff;
+    text-transform: uppercase;
+    background: none;
+}
+form button.btn:hover {
+    color: #fff;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
 /*
+Arvo
+Open sans
 -webkit-transform:scale(1.25);
 -moz-transform:scale(1.25);
 -ms-transform:scale(1.25);
