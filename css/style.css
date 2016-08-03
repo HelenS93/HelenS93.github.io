@@ -102,16 +102,19 @@ hr {
 /*Слайдер*/
 .bgCarousel {
     height: 50em;
-    background: url("../img/SliderBg.png") no-repeat;
+    background: url("../img/SliderBg.png") no-repeat  rgba(23,32,41,0.7);
     background-size: 100% 100%;
     color: #fff;
 }
-.bgCarousel::before {
-    content: "";
+.bgCarousel:before {
+    content: attr(data-line);
     position:absolute;
     width: 100%;
     height: 50em;
     background: rgba(23,32,41,0.7);
+}
+.bgCarousel.mobile:before {
+    background: none;
 }
 #myCarousel {
     height: 50em;
