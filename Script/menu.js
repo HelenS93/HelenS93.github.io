@@ -14,39 +14,38 @@ $(document).ready(function () {
 
 //меню
     function SetDisplayMenu() {
-
-
-        var win_h = $(window).height();
-
+        var bgMenu = $('.bgCarousel');
         var displayToggle = $('.navbar-toggle').css('display');
         if(displayToggle!='none') { //когда есть блинная кнопка
+
+            var win_h = $(window).height();
+            var navH = $('.bNav').height(); //высота меню
+            var MenuHeight = navH+$('.navbar-toggle').height(); //высота меню
+
+            $(bgMenu).height(win_h);
+
             $('.Mypage').css('top','0.5em');
             $('.navbar-nav').removeClass('pull-right');
             $('img.search').css('top','-1.5em');
 
             //фон
-            bgMenu = $('.bgCarousel');
-            $(bgMenu).css('background-size', 'cover');
-            $(bgMenu).height(win_h);//высотаBG=экрану
-            $(bgMenu).addClass('mobile'); //прячем затемнение
-            var navH = $('.bNav').height(); //высота меню
-
-            if(navH>win_h) {
-                $(bgMenu).height(navH);
+            if(MenuHeight>win_h) {
+                $(bgMenu).height(MenuHeight);
             }
-
+            $(bgMenu).css('background-size', 'cover');
+            $(bgMenu).addClass('mobile'); //прячем затемнение
+            
             $('.navbar-toggle').click(function () {
                 var displayMenu = $('.navbar-collapse').css('display');
                 if (displayMenu!='none') {//когда меню исчезает
-                    $(bgMenu).height(win_h);//высотаBG=экрану
                     $('.navbar-collapse').css('display','none');
+                    $(bgMenu).height(win_h);//высотаBG=экрану
                 }
                 else {//когда меню появляется
                     $('.navbar-collapse').css('display','block');
-                    if(navH<win_h) {
+                    if(MenuHeight<win_h) {
                         $(bgMenu).height(win_h);
                     } else{
-                        var MenuHeight = $('.bNav').height()+$('.navbar-nav').height(); //высота меню
                         $(bgMenu).height(MenuHeight);
                     }
                 }
