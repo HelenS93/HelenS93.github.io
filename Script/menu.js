@@ -6,14 +6,14 @@
 
 $(document).ready(function () {
     $(window).resize(function () {
-        SetDisplayMenu();
+        setDisplayMenu();
     });
     $(window).load(function () {
-        SetDisplayMenu();
+        setDisplayMenu();
     });
 
 //меню
-    function SetDisplayMenu() {
+    function setDisplayMenu() {
         var bgMenu = $('.bgCarousel');
         var displayToggle = $('.navbar-toggle').css('display');
         if(displayToggle!='none') { //когда есть блинная кнопка
